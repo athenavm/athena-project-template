@@ -5,4 +5,4 @@ name = "fibonacci-program"
 edition = "2021"
 
 [dependencies]
-athena-vm = "0.3.0"
+athena-vm = { version = "0.3.0", features = ["rv32e"] }

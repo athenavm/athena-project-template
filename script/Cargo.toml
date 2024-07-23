@@ -3,11 +3,11 @@
 version = "0.1.0"
 name = "fibonacci-script"
 edition = "2021"
-default-run = "prove"
+default-run = "execute"
 
 [[bin]]
-name = "run"
-path = "src/bin/run.rs"
+name = "execute"
+path = "src/bin/execute.rs"
 
 [dependencies]
 athena-sdk = "0.3.0"
