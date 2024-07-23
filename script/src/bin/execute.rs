@@ -34,9 +34,6 @@ fn main() {
     // Setup the execution client.
     let client = ExecutionClient::new();
 
-    // Setup the program.
-    // let (pk, vk) = client.setup(FIBONACCI_ELF);
-
     // Setup the inputs.
     let mut stdin = AthenaStdin::new();
     stdin.write(&args.n);
