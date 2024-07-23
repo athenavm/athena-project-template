@@ -5,4 +5,6 @@ name = "fibonacci-program"
 edition = "2021"
 
 [dependencies]
-athena-vm = { version = "0.3.0", features = ["rv32e"] }
+athena-vm = { git = "https://github.com/athenavm/athena.git", branch = "main", features = [
+  "rv32e",
+] }
