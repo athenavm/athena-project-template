@@ -12,5 +12,5 @@ Athena VM.
 
 ```sh
 cd script
-RUST_LOG=info cargo run --bin prove --release
+RUST_LOG=info cargo run --bin run --release
 ```
