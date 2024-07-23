@@ -10,13 +10,12 @@ name = "execute"
 path = "src/bin/execute.rs"
 
 [dependencies]
+athena-interface = { git = "https://github.com/athenavm/athena.git", branch = "main" }
 athena-sdk = { git = "https://github.com/athenavm/athena.git", branch = "main" }
 serde_json = { version = "1.0", default-features = false, features = ["alloc"] }
 serde = { version = "1.0", default-features = false, features = ["derive"] }
 clap = { version = "4.0", features = ["derive", "env"] }
-tracing = "0.1.40"
-hex = "0.1.0"
 
 [build-dependencies]
-athena-sdk = { git = "https://github.com/athenavm/athena.git", branch = "main" }
 athena-helper = { git = "https://github.com/athenavm/athena.git", branch = "main" }
+athena-sdk = { git = "https://github.com/athenavm/athena.git", branch = "main" }

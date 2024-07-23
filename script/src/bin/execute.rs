@@ -2,15 +2,11 @@
 //!
 //! You can run this script using the following command:
 //! ```shell
-//! RUST_LOG=info cargo run --package fibonacci-script --bin run --release
+//! RUST_LOG=info cargo run --package fibonacci-script --bin execute --release
 //! ```
-
-use std::path::PathBuf;
-
+use athena_interface::MockHost;
 use athena_sdk::{AthenaStdin, ExecutionClient};
 use clap::Parser;
-use hex;
-use serde::{Deserialize, Serialize};
 
 /// The ELF (executable and linkable format) file for the Athena RISC-V VM.
 ///
@@ -30,7 +26,7 @@ struct RunArgs {
 
 fn main() {
     // Setup the logger.
-    sp1_sdk::utils::setup_logger();
+    athena_sdk::utils::setup_logger();
 
     // Parse the command line arguments.
     let args = RunArgs::parse();
@@ -49,8 +45,8 @@ fn main() {
 
     // Run the program.
     let (mut output, _) = client
-        .execute::<MockHost>(FIBONACCI_ELF, &mut stdin, None, None, None)
+        .execute::<MockHost>(FIBONACCI_ELF, stdin, None, None, None)
         .expect("failed to run program");
-    println!("Successfully generated proof!");
-    println!("fib(n): {}", fib_n);
+    println!("Successfully executed program!");
+    println!("fib(n): {}", output.read::<u32>());
 }

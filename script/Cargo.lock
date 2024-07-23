@@ -99,7 +99,7 @@ dependencies = [
  "bincode",
  "cfg-if",
  "elf",
- "hex 0.4.3",
+ "hex",
  "log",
  "nohash-hasher",
  "rrs-lib",
@@ -141,7 +141,7 @@ dependencies = [
  "athena-interface",
  "bincode",
  "cfg-if",
- "hex 0.4.3",
+ "hex",
  "log",
  "serde",
  "tracing",
@@ -399,12 +399,11 @@ name = "fibonacci-script"
 version = "0.1.0"
 dependencies = [
  "athena-helper",
+ "athena-interface",
  "athena-sdk",
  "clap",
- "hex 0.1.0",
  "serde",
  "serde_json",
- "tracing",
 ]
 
 [[package]]
@@ -464,12 +463,6 @@ name = "heck"
 version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2304e00983f87ffb38b55b444b5e3b60a884b5d30c0fca7d82fe33449bbe55ea"
-
-[[package]]
-name = "hex"
-version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "284091bf8874ea6b5b97485180d3e5e9d2a98b4c646d4dc6c40e44a37f6d44fc"
 
 [[package]]
 name = "hex"
@@ -894,7 +887,7 @@ checksum = "69cecfa94848272156ea67b2b1a53f20fc7bc638c4a46d2f8abde08f05f4b857"
 dependencies = [
  "base64",
  "chrono",
- "hex 0.4.3",
+ "hex",
  "indexmap 1.9.3",
  "indexmap 2.2.6",
  "serde",
