@@ -1,0 +1,22 @@
+[workspace]
+[package]
+version = "0.1.0"
+name = "fibonacci-script"
+edition = "2021"
+default-run = "prove"
+
+[[bin]]
+name = "run"
+path = "src/bin/run.rs"
+
+[dependencies]
+athena-sdk = "0.3.0"
+serde_json = { version = "1.0", default-features = false, features = ["alloc"] }
+serde = { version = "1.0", default-features = false, features = ["derive"] }
+clap = { version = "4.0", features = ["derive", "env"] }
+tracing = "0.1.40"
+hex = "0.1.0"
+
+[build-dependencies]
+athena-sdk = "0.3.0"
+athena-helper = "0.3.0"
