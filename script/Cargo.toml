@@ -18,4 +18,3 @@ clap = { version = "4.0", features = ["derive", "env"] }
 
 [build-dependencies]
 athena-helper = { git = "https://github.com/athenavm/athena.git", branch = "main" }
-athena-sdk = { git = "https://github.com/athenavm/athena.git", branch = "main" }
