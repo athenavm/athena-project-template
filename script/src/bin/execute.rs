@@ -4,7 +4,6 @@
 //! ```shell
 //! RUST_LOG=info cargo run --package fibonacci-script --bin execute --release
 //! ```
-use athena_interface::MockHost;
 use athena_sdk::{AthenaStdin, ExecutionClient};
 use clap::Parser;
 
@@ -42,7 +41,7 @@ fn main() {
 
     // Run the program.
     let (mut output, _) = client
-        .execute::<MockHost>(FIBONACCI_ELF, stdin, None, None, None)
+        .execute(FIBONACCI_ELF, stdin, None, None, None)
         .expect("failed to run program");
     println!("Successfully executed program!");
     println!("fib(n): {}", output.read::<u32>());
