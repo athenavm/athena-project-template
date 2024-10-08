@@ -24,8 +24,7 @@ struct RunArgs {
 }
 
 fn main() {
-    // Setup the logger.
-    athena_sdk::utils::setup_logger();
+    tracing_subscriber::fmt::init();
 
     // Parse the command line arguments.
     let args = RunArgs::parse();
