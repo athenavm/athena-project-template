@@ -15,4 +15,4 @@ clap = { version = "4.0", features = ["derive", "env"] }
 tracing-subscriber = "0.3.18"
 
 [build-dependencies]
-athena-helper = { git = "https://github.com/athenavm/athena.git", branch = "main" }
+athena-builder = { git = "https://github.com/athenavm/athena.git", branch = "main" }
